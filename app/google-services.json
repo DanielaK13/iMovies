@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "749670038055",
+    "firebase_url": "https://imoviesapp-ab65d.firebaseio.com",
+    "project_id": "imoviesapp-ab65d",
+    "storage_bucket": "imoviesapp-ab65d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749670038055:android:6fde908c7a7ff3ab",
+        "android_client_info": {
+          "package_name": "com.example.daniela.imovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749670038055-hm2jqr0ni92b2f9jimkcf6dol3q75319.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.daniela.imovies",
+            "certificate_hash": "2fca74e8ece4cb8d4e7a8e73e67e235c84a11fe2"
+          }
+        },
+        {
+          "client_id": "749670038055-t50sfjefs2nf26esneghgdaj7jq1amil.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "749670038055-t50sfjefs2nf26esneghgdaj7jq1amil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM1y3OjIBfKFAQSzKuLE0XKH7Q2fahuSs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749670038055-t50sfjefs2nf26esneghgdaj7jq1amil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
