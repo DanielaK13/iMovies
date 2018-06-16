@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import com.example.daniela.imovies.entity.MyDate;
+
 import com.example.daniela.imovies.entity.MyList;
 import com.example.daniela.imovies.R;
 

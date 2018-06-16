@@ -32,7 +32,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.daniela.imovies.entity.MyDate;
+
 import com.example.daniela.imovies.entity.MyList;
 import com.example.daniela.imovies.misc.ListSerieAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,13 +47,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Date;
-
-
-import com.example.daniela.imovies.entity.MyDate;
 import com.example.daniela.imovies.entity.MyList;
 import com.example.daniela.imovies.misc.ListSerieAdapter;
 
-public class MainActivity extends AppCompatActivity//{
+
+public class MainActivity extends AppCompatActivity
       implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth mAuth;
@@ -74,6 +72,7 @@ public class MainActivity extends AppCompatActivity//{
     private ListSerieAdapter aLivSeries;
 
     private static final int NEW_SERIE = 69;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,12 +114,10 @@ public class MainActivity extends AppCompatActivity//{
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 MyList list = dataSnapshot.getValue(MyList.class);
                 if(!list.getDone() ){
-                        //&& list.getDate().equals(MyDate.getMyDate(new Date()))){
                     series.add(list);
                     aLivSeries = new ListSerieAdapter(MainActivity.this, R.layout.series_list_item, series);
                     livSeries.setAdapter(aLivSeries);
                     ajustaTamanho(series.size(), livSeries);
-
 
 
                     Context ctx = MainActivity.this;
@@ -139,8 +136,8 @@ public class MainActivity extends AppCompatActivity//{
                             .setSmallIcon(R.drawable.ic_done)
                             .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_done))
                             .setAutoCancel(true)
-                            .setContentTitle("Hello " + user.getDisplayName());
-                            //.setContentText("You have " + series.size() + " tasks today");
+                            .setContentTitle("Hello " + user.getDisplayName())
+                            .setContentText("You have " + series.size() + " series to watch");
                     Notification n = builder.build();
 
                     nm.notify(001, n);
@@ -199,37 +196,32 @@ public class MainActivity extends AppCompatActivity//{
         startActivity(new Intent(getIntent()));
     }
 
-    public void updateSeries(final FirebaseDatabase fb){
-        DatabaseReference ref = fb.getReference("users/" + user.getUid() + "/serie");
 
-        ref.orderByChild("date").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                MyList list = dataSnapshot.getValue(MyList.class);
+        public void updateSeries(final FirebaseDatabase fb){
+            DatabaseReference ref = fb.getReference("users/" + user.getUid() + "/serie");
 
-                //if(MyDate.before(list.getDate(), MyDate.getMyDate(new Date()))){
-                    //dataSnapshot.getRef().removeValue();
+            ref.orderByChild("date").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    MyList list = dataSnapshot.getValue(MyList.class);
 
-                   // DatabaseReference newRef = fb.getReference("users/" + user.getUid() + "/oldTask");
-                   // newRef.push().setValue(list);
-               // }
+                }
 
-            }
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
 
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {}
 
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {}
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
 
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
+                @Override
+                public void onCancelled(DatabaseError databaseError) {}
+            });
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {}
-        });
+        }
 
-    }
 
     public void addDone(MyList list){
 
@@ -292,8 +284,9 @@ public class MainActivity extends AppCompatActivity//{
             FirebaseDatabase fb = FirebaseDatabase.getInstance();
             DatabaseReference ref = fb.getReference("users/" + user.getUid() + "/serie");
 
-            String sDate = MyDate.getMyDate(new Date());
-            if(sDate != null){
+            //String sDate = MyDate.getMyDate(new Date());
+
+           // if(sDate != null){
 
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -310,9 +303,9 @@ public class MainActivity extends AppCompatActivity//{
 
                     }
                 });
-            }else{
-                Toast.makeText(this, getString(R.string.anErrorOcurred), Toast.LENGTH_SHORT).show();
-            }
+           // }else{
+                //Toast.makeText(this, getString(R.string.anErrorOcurred), Toast.LENGTH_SHORT).show();
+            //}
         }
 
     }
@@ -323,8 +316,8 @@ public class MainActivity extends AppCompatActivity//{
             FirebaseDatabase fb = FirebaseDatabase.getInstance();
             DatabaseReference ref = fb.getReference("users/" + user.getUid() + "/serie");
 
-            String sDate = MyDate.getMyDate(new Date());
-            if(sDate != null){
+           // String sDate = MyDate.getMyDate(new Date());
+           // if(sDate != null){
 
                 ref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -343,12 +336,13 @@ public class MainActivity extends AppCompatActivity//{
 
                     }
                 });
-            }else{
-                Toast.makeText(this, getString(R.string.anErrorOcurred), Toast.LENGTH_SHORT).show();
-            }
+           // }else{
+            //    Toast.makeText(this, getString(R.string.anErrorOcurred), Toast.LENGTH_SHORT).show();
+            //}
         }
 
     }
+
 
     @Override
     public void onBackPressed() {
@@ -370,16 +364,19 @@ public class MainActivity extends AppCompatActivity//{
         }
     }
 
+
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.navConfig) {
+        //if (id == R.id.navConfig) {
             //startActivity(new Intent(MainActivity.this, ConfigActivity.class));
 
-        } else if (id == R.id.navSignout) {
+        //} else
+        if (id == R.id.navSignout) {
             new AlertDialog.Builder(this)
                     .setTitle(R.string.signout)
                     .setMessage(R.string.signoutConfirm)
@@ -403,6 +400,7 @@ public class MainActivity extends AppCompatActivity//{
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 
+
     public void initView(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -415,10 +413,12 @@ public class MainActivity extends AppCompatActivity//{
 
     }
 
+
     public void infoUser(){
         Picasso.with(this).load(user.getPhotoUrl()).into(imgUserPhoto);
         txtUserName.setText(user.getDisplayName());
         txtUserEmail.setText(user.getEmail());
     }
-//*/
+
+
 }

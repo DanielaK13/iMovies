@@ -22,6 +22,10 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NewSerieActivity"
+            android:label="@string/title_activity_new_serie"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

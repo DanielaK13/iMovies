@@ -14,12 +14,14 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="signoutConfirm">Are you sure you want to sign out?</string>
-    <string name="options">Options</string>
-    <string name="title_activity_new_serie" translatable="false">NewSerieActivity</string>
-    <string name="newserie">New Serie</string>
+    <string name="options">Opções</string>
+    <string name="title_activity_new_serie" translatable="false">Adicionar novas séries</string>
+    <string name="myserie">Minhas Séries</string>
     <string name="whatSerie">Qual série você deseja adicionar?</string>
-    <string name="season">Season</string>
+    <string name="season">Temporada</string>
     <string name="newtaskhint0">Lost</string>
+
+    <string name="episode">Episódio</string>
     <string name="title_activity_config" translatable="false">ConfigActivity</string>
     <string name="notifications">Notifications</string>
     <string name="notificationsExpl">Show me notifications of tasks</string>
