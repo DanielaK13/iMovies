@@ -1,0 +1,17 @@
+public class Episode
+    {
+        public int Season { get; set; }
+        public string FKSerie { get; set; }
+        public int Ep { get; set; }
+        public string Name { get; set; }
+        public string Synopsis { get; set; }
+    }
+	
+	
+public class Serie
+    {
+        public string Name { get; set; }
+        public int Seasons { get; set; }
+        public string Synopsis { get; set; }
+        public List<Episode> Episodes { get; set; }
+    }
