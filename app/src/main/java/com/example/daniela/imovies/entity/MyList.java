@@ -24,6 +24,10 @@ public class MyList {
         this.date = date;
     }
 
+    public MyList(String name, boolean done) {
+        this.name = name;
+        this.done = done;
+    }
     public String getDescription() {
         return description;
     }

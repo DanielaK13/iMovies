@@ -6,14 +6,14 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
     <string name="serverConnectionLost">Server connection lost</string>
 
-    <string name="configurations">Settings</string>
-    <string name="signout">Sign out</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="signoutConfirm">Are you sure you want to sign out?</string>
+    <string name="configurations">Configurações</string>
+    <string name="signout">Sair</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="signoutConfirm">Você tem certeza que deseja sair?</string>
     <string name="options">Opções</string>
     <string name="title_activity_new_serie" translatable="false">Adicionar novas séries</string>
     <string name="myserie">Minhas Séries</string>
@@ -23,14 +23,14 @@
 
     <string name="episode">Episódio</string>
     <string name="title_activity_config" translatable="false">ConfigActivity</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Notificações</string>
     <string name="notificationsExpl">Show me notifications of tasks</string>
-    <string name="loginFailed">Google Login failed</string>
-    <string name="close">Close</string>
-    <string name="closeMsg">Are you sure you want to close iMovies?</string>
+    <string name="loginFailed">Login com Google falhou</string>
+    <string name="close">Fechar</string>
+    <string name="closeMsg">Você deseja fechar o iMovies?</string>
     <string name="errorToSaveTask">There was an error saving te task, try again</string>
     <string name="anErrorOcurred">An error ocurred, try again</string>
-    <string name="newSerieCancelled">New serie cancelled</string>
+    <string name="newSerieCancelled">Inserção cancelada</string>
     <string name="done">Done</string>
     <string name="lists">Lists</string>
 </resources>

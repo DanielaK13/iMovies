@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity
         public void updateSeries(final FirebaseDatabase fb){
             DatabaseReference ref = fb.getReference("users/" + user.getUid() + "/serie");
 
-            ref.orderByChild("date").addChildEventListener(new ChildEventListener() {
+            ref.addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     MyList list = dataSnapshot.getValue(MyList.class);

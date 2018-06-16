@@ -19,6 +19,15 @@
         android:layout_height="wrap_content"
         android:text="@string/whatSerie" />
 
+    <EditText
+        android:id="@+id/edtNewWhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/newtaskhint0"
+        android:inputType="textMultiLine" />
+
 
 
 </LinearLayout>
