@@ -136,8 +136,8 @@ public class MainActivity extends AppCompatActivity
                             .setSmallIcon(R.drawable.ic_done)
                             .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_done))
                             .setAutoCancel(true)
-                            .setContentTitle("Hello " + user.getDisplayName())
-                            .setContentText("You have " + series.size() + " series to watch");
+                            .setContentTitle("Olá " + user.getDisplayName())
+                            .setContentText("Você tem " + series.size() + " série(s) para assistir");
                     Notification n = builder.build();
 
                     nm.notify(001, n);
