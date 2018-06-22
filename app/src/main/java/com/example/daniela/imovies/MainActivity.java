@@ -33,6 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.daniela.imovies.comm.SeriesGet;
 import com.example.daniela.imovies.entity.MyList;
 import com.example.daniela.imovies.misc.ListSerieAdapter;
 import com.google.firebase.auth.FirebaseAuth;
