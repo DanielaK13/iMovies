@@ -8,6 +8,14 @@ public class Episode {
     private String name;
     private String synopsis;
 
+    public Episode(Integer season, String fkSerie, Integer ep, String name, String synopsis){
+        this.season = season;
+        this.ep = ep;
+        this.fkSerie = fkSerie;
+        this.name = name;
+        this.synopsis = synopsis;
+    }
+
     public Integer getEpTot() {
         return epTot;
     }

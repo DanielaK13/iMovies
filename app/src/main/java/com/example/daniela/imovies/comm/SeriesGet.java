@@ -47,6 +47,7 @@ public class SeriesGet implements Runnable{
                 lista.add(new Serie(item.getString("Name"), item.getInt("Seasons"), item.getString("Synopsis")));
             }
             series = lista;
+
             s.close();
 
         }catch(Exception e){
