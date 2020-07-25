@@ -1,6 +1,6 @@
 # iMovies
 
-This is an app to register series and movies the user is watching.
+This is an Android app to register series and movies the user is watching.
 
 The user registers into the app using a Google account. We use [Firebase](https://firebase.google.com/) to manage our project.
 
